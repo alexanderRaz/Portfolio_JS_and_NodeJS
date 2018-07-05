@@ -1,0 +1,16 @@
+{
+  "name": "gis_full",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "seraph": "^0.15.2",
+    "socket.io": "^2.0.3"
+  }
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+#wrgsv ul{
+	list-style: none;
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 1px;
+	width: 100%;
+	border: 1px solid #DDD;
+}
+#wrgsv ul > li{
+	margin: 7px 0;
+}
+#wrgsv ul > li > a{
+	display: inline;
+	width: 100%;
+	margin: 7px 0;
+	color: #505050;
+	text-decoration: none;
+}
+#wrgsv ul > li > a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}

@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="./js/jquery.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/leaflet.css"/>
+    <link rel="stylesheet" href="./Leaflet.draw/src/leaflet.draw.css"/>
+    <script src="./js/leaflet-src.js"></script>
+
+    <script src="./Leaflet.draw/src/Leaflet.draw.js"></script>
+    <script src="./Leaflet.draw/src/Leaflet.Draw.Event.js"></script>
+
+    <script src="./Leaflet.draw/src/edit/handler/Edit.Poly.js"></script>
+    <script src="./Leaflet.draw/src/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="./Leaflet.draw/src/edit/handler/Edit.Circle.js"></script>
+    <script src="./Leaflet.draw/src/edit/handler/Edit.Rectangle.js"></script>
+    <script src="./Leaflet.draw/src/edit/handler/Edit.Marker.js"></script>
+
+    <script src="./Leaflet.draw/src/draw/handler/Draw.Feature.js"></script>
+    <script src="./Leaflet.draw/src/draw/handler/Draw.Polyline.js"></script>
+    <script src="./Leaflet.draw/src/draw/handler/Draw.Polygon.js"></script>
+    <script src="./Leaflet.draw/src/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="./Leaflet.draw/src/draw/handler/Draw.Rectangle.js"></script>
+    <script src="./Leaflet.draw/src/draw/handler/Draw.Circle.js"></script>
+    <script src="./Leaflet.draw/src/draw/handler/Draw.Marker.js"></script>
+
+    <script src="./Leaflet.draw/src/ext/TouchEvents.js"></script>
+    <script src="./Leaflet.draw/src/ext/LatLngUtil.js"></script>
+    <script src="./Leaflet.draw/src/ext/GeometryUtil.js"></script>
+    <script src="./Leaflet.draw/src/ext/LineUtil.Intersect.js"></script>
+    <script src="./Leaflet.draw/src/ext/Polyline.Intersect.js"></script>
+    <script src="./Leaflet.draw/src/ext/Polygon.Intersect.js"></script>
+
+    <script src="./Leaflet.draw/src/Control.Draw.js"></script>
+    <script src="./Leaflet.draw/src/Tooltip.js"></script>
+    <script src="./Leaflet.draw/src/Toolbar.js"></script>
+
+    <script src="./Leaflet.draw/src/draw/DrawToolbar.js"></script>
+    <script src="./Leaflet.draw/src/edit/EditToolbar.js"></script>
+    <script src="./Leaflet.draw/src/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="./Leaflet.draw/src/edit/handler/EditToolbar.Delete.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="./css/client.css"/>
+    <script src="./js/client.js"></script>
+  </head>
+  <body>
+    <div id="find" class="row">
+      <div class="col-md-6"><input type="text" name="name" value="" placeholder="Поисковый запрос">
+        <button type="button" class="btn btn-primary">Найти</button>
+      </div>
+    </div>
+    <div id="container"></div>
+    <!-- HTML-код модального окна -->
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Заголовок модального окна -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Новая метка на карте</h4>
+          </div>
+          <!-- Основное содержимое модального окна -->
+          <div class="modal-body">
+            <div class="container-fluid">
+              <!-- Контейнер, в котором можно создавать классы системы сеток -->
+              <div class="row">
+                <div class="col-md-3">Имя</div>
+                <div class="col-md-6"><input type="text" name="name" value=""></div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Широта</div>
+                <div class="col-md-6"><input type="text" name="latitude" value="" readonly></div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">Долгота</div>
+                <div class="col-md-6"><input type="text" name="longitude" value="" readonly></div>
+              </div>
+            </div>
+          </div>
+          <!-- Футер модального окна -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Сохранить изменения</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+<html>

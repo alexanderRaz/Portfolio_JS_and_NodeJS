@@ -1,0 +1,79 @@
+*{margin: 0; padding: 0px}
+body { margin: 0; padding: 0px; border: 0; background:#fff url(bg.gif)}
+p,li,ol,ul,td,div { font-size:12px; font-family:verdana, tahoma}
+h1 {margin:0 0 10px 10px; font-size: 18px; font-weight: normal; color: #555; font-family: verdana, tahoma}
+h2 {margin:0 0 10px 10px; font-size: 16px; font-weight: normal; color: #555; font-family: verdana, tahoma}
+img { border: 0}
+*:focus {outline: none}
+a:link {color:#00a6ff; text-decoration: none}
+a:visited {color:#00a6ff; text-decoration:none}
+a:hover {color:#c52026; text-decoration:none}
+select{cursor:pointer}
+option:hover{cursor:pointer}
+#vhod{width:270px; height: 250px; padding:15px; margin:17% auto 0; border:7px double #e3e3e3; background:#fff; 
+box-shadow: -18px 5px 20px -20px #555, 18px 5px 20px -20px #555
+}
+._vhod{width:120px; height:16px; border:1px solid #e3e3e3; text-indent: 20px
+}
+#slav-date{width:85px; font-size: 18px; font-weight: normal; color:#f00; border:none
+}
+#main{width:1000px; height:auto; padding:5px; margin:10px auto 20px; border:3px double #e3e3e3;
+box-shadow: -18px 5px 20px -20px #555, 18px 5px 20px -20px #555; background:#fff
+}
+#main_top{width:auto; height:50px
+}
+#menu_img{width:100%; height:auto; margin:0 0 10px; padding:5px 0; border:3px double #e3e3e3
+}
+#i{width:900px; height: auto; font-size:12px; padding:5px; margin:10px auto; border:1px dotted #e3e3e3; background:#ffffff}
+
+#ast{width:100%}
+#ast input{width:250px; border:2px solid #e3e3e3; padding-left:5px}
+#ast select{width:260px; border:2px solid #e3e3e3; padding-left:2px}
+#tdd{width:730px}
+#fontr{background:#fafafa}
+#fontr:hover{background:#ededed}
+#inews{width:700px; margin: 5px 0 10px; border:2px solid #e3e3e3}
+#polya input{width:500px; border:2px solid #e3e3e3}
+#polya select{min-width:200px; border:2px solid #e3e3e3; padding-left:2px}
+
+/*картинки категорий */
+
+.poster {
+display: block; 
+overflow: hidden; 
+max-width: 203px; 
+max-height: 203px;
+border-radius: 10px;
+   }  
+   
+.poster2 {
+display: block; 
+overflow: hidden; 
+max-width: 103px; 
+max-height: 103px;
+border-radius: 10px;
+   }  
+
+/*Кнопка*/
+
+.ok{font-size: 12px; font-weight: normal; font-family: verdana; border:#e2e2e2 solid 1px; text-decoration:none; margin: 0 5px; padding:5px 15px; cursor:pointer;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#fafafa', endColorstr = '#e2e2e2');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#fafafa', endColorstr = '#e2e2e2')";
+background-image: -moz-linear-gradient(top, #fafafa, #e2e2e2);
+background-image: -ms-linear-gradient(top, #fafafa, #e2e2e2);
+background-image: -o-linear-gradient(top, #fafafa, #e2e2e2);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#fafafa), to(#e2e2e2));
+background-image: -webkit-linear-gradient(top, #fafafa, #e2e2e2);
+background-image: linear-gradient(top, #fafafa, #e2e2e2);
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+}
+.ok:hover {color:#f00}
+a.ok{color:#000; /*background:url(../images/ok.png) no-repeat*/}
+
+#bottom{width:1000px; height: auto; margin:30px 0 0; padding:5px 0; border-top:3px double #e3e3e3
+}

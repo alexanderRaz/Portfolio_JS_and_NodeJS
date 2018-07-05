@@ -1,0 +1,18 @@
+﻿<!DOCTYPE HTML>
+<head>
+	<title>Вход в систему</title>
+	<meta charset="utf-8">
+	<LINK href="skin/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="vhod"><center>Вход в систему</center><br><br><br>
+	<form action="/enter" method="post" style="margin-left:75px">
+		<input type="text" name="login" class="_vhod" style="background:url(images/user.png) no-repeat 1px 1px" placeholder="Логин"><br><br>
+		<input type="password" name="pass" class="_vhod" style="background:url(images/key.png) no-repeat 1px 1px" placeholder="Пароль"><br><br>
+		<input name="keystring" class="_vhod" type="text" id="search_field" placeholder="Код">
+		<img style="margin:5px 0; height:50px; width:120px;" src="/captcha">
+		<input type="submit" value="Войти" style="width:122px; height:35px; cursor:pointer">
+	</form>
+</div>
+</body>
+</html>

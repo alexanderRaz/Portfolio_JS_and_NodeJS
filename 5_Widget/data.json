@@ -1,0 +1,12 @@
+[
+	{"href":"https://learn.javascript.ru/getting-started", "title":"Введение в JS"},
+	{"href":"https://learn.javascript.ru/first-steps", "title":"Основы JavaScript"},
+	{"href":"https://learn.javascript.ru/writing-js", "title":"Качество кода"},
+	{"href":"https://learn.javascript.ru/data-structures", "title":"Структуры данных"},
+	{"href":"https://learn.javascript.ru/functions-closures", "title":"Замыкания, область видимости"},
+	{"href":"https://learn.javascript.ru/objects-more", "title":"Методы объектов и контекст вызова"},
+	{"href":"https://learn.javascript.ru/js-misc", "title":"Некоторые другие возможности"},
+	{"href":"https://learn.javascript.ru/oop", "title":"ООП в функциональном стиле"},
+	{"href":"https://learn.javascript.ru/prototypes", "title":"ООП в прототипном стиле"},
+	{"href":"https://learn.javascript.ru/es-modern", "title":"Современные возможности ES-2015"}	
+]
