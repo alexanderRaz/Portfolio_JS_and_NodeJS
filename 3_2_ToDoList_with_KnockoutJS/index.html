@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.0.js"></script>
+</head>
+<body>
+	<div id="todoKnockout">
+		<div id="myDiv" class="header">
+			<h2>To Do List</h2>
+			<input type="text" id="myInput" data-bind="value: titleTask" placeholder="Title">
+			<span class="btn" data-bind="click: newElement">Add</span>
+		</div>
+		<ul id="myUl" data-bind="foreach: { data: tasks, as: 'task'}">
+			<li data-bind=" attr: { id: task.id }, 
+							text: task.title, 
+							css: { checked: task.isDeleting}, 
+							click: $parent.changeDeletingStatus"></li>
+		</ul>
+		<div>
+			<span class="btn" data-bind="click: deleteElement">Delete</span>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

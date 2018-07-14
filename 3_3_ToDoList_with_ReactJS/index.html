@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+</head>
+<body>
+	<div id="todoReact"></div>
+	<script type="text/babel">
+		class ToDoList extends React.Component {
+			constructor(props) {
+				super(props);
+				this.state = {
+					countIdTasks:0,
+					titleTask:'',
+					tasks:[]
+				}
+				this.newElement = this.newElement.bind(this);
+				this.deleteElement = this.deleteElement.bind(this);
+				this.updateInputValue = this.updateInputValue.bind(this);
+				this.changeDeletingClass = this.changeDeletingClass.bind(this);
+			}
+			newElement(){
+				let task = {
+					id:this.state.countIdTasks++, 
+					title:this.state.titleTask,
+					deletingClass:""
+				}
+				
+				this.setState(function(prevState){
+					return {
+						tasks:prevState.tasks.concat(task),
+						titleTask:''
+					}
+				});
+			}
+			changeDeletingClass(e){
+				let id = parseInt(e.target.id);
+				this.setState(function(prevState){					
+					const tasks = prevState.tasks;
+					for(let i = 0; i < tasks.length; i++){
+						if(tasks[i].id === id) {
+							tasks[i].deletingClass = (tasks[i].deletingClass === "")?"checked":"";
+							break;
+						}
+					}
+					return { tasks:tasks };
+				});
+			}
+			deleteElement(){
+				for(let i = 0; i < this.state.tasks.length; i++)
+					if(this.state.tasks[i].deletingClass) {
+						this.state.tasks.splice(i,1);
+						i--;
+					}
+				this.setState(function(prevState){
+					const tasks = prevState.tasks;
+					for(let i = 0; i < tasks.length; i++)
+						if(this.state.tasks[i].deletingClass) {
+							tasks.splice(i,1);
+							i--;
+						}
+					return { tasks:tasks };
+				});				
+			}
+			updateInputValue(e, b){
+				this.setState({titleTask:e.target.value});
+			}
+			render(){
+				let self = this;
+				return (
+					<div>
+						<div id="myDiv" class="header">
+							<h2>To Do List</h2>
+							<input type="text" id="myInput" value={this.state.titleTask} placeholder="Title" onChange={this.updateInputValue} />
+							<span class="btn" onClick={this.newElement}>Add</span>
+						</div>
+						<ul id="myUl">
+							{
+								this.state.tasks.map(function(task){
+									return (<li id={task.id} onClick={self.changeDeletingClass} class={task.deletingClass}>{task.title}</li>);
+								})
+							}
+						</ul>
+						<div>
+							<span class="btn" onClick={this.deleteElement}>Delete</span>
+						</div>
+					</div>					
+				)
+			}
+		}
+		
+		ReactDOM.render(
+			<ToDoList />,
+			document.getElementById("todoReact")
+		);
+	</script>
+</body>
+</html>
